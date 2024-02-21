@@ -6,18 +6,18 @@
                 <t t-call="web.external_layout" t-lang="doc.user_id.lang">
                         <div class="page">
                             <div class="table-responsive-xl">
-                                <table class="table table-borderless text-center">
+                                <table class="table table text-center">
                             <thead class="thead-light">
                                 <tr>
                                     <th class="text-break margin-top" colspan="4">
-                                        <h2 class="mt-2" t-field="doc.name_cropped"/>
+                                        <h2 class="display-1" t-field="doc.name_cropped"/>
                                     </th>
                                 </tr>
                             </thead>
                             <tbody>
-                                <tr class="table-active-borderless">
-                                    <td>Estatus</td>
-                                    <td>Progreso</td>
+                                <tr class="table-active">
+                                    <th>Estatus</th>
+                                    <th>Progreso</th>
                                     <td>Fecha</td>
                                     <td>Responsable</td>
                                 </tr>
@@ -26,7 +26,7 @@
                                         <span t-field="doc.status"/>
                                     </td>
                                     <td>
-                                        <span t-field="doc.progress"/>%
+                                        <span t-field="doc.progress"/> %
 
                                     </td>
                                     <td>
