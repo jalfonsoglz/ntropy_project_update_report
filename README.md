@@ -4,6 +4,9 @@
 
 ## Changelog
 
+### 21/02/2024 v1.3
+* Mejoras de formato 
+
 ### 20/02/2024 v17.2
 * Actualización a v17.2
 

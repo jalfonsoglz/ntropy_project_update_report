@@ -4,47 +4,46 @@
         <t t-call="web.html_container">
             <t t-foreach="docs" t-as="doc">
                 <t t-call="web.external_layout" t-lang="doc.user_id.lang">
-                        <div class="page">
-                            <div class="table-responsive-xl">
-                                <table class="table table text-center">
-                            <thead class="thead-light">
-                                <tr>
-                                    <th class="text-break margin-top" colspan="4">
-                                        <h2 class="display-1" t-field="doc.name_cropped"/>
-                                    </th>
-                                </tr>
-                            </thead>
-                            <tbody>
-                                <tr class="table-active">
-                                    <th>Estatus</th>
-                                    <th>Progreso</th>
-                                    <td>Fecha</td>
-                                    <td>Responsable</td>
-                                </tr>
-                                <tr>
-                                    <td>
-                                        <span t-field="doc.status"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="doc.progress"/> %
-
-                                    </td>
-                                    <td>
-                                        <span t-field="doc.date"/>
-                                    </td>
-                                    <td>
-                                        <span t-field="doc.user_id"/>
-                                    </td>
-                                </tr>
-                            </tbody>
-                        </table>
-                        <div id="update_resume" class="row col-12">
-                            <div class="col-12">
-                                <span t-field="doc.description"/>
+                    <div class="page">
+                        <div class="table-responsive-xl">
+                            <table class="table table text-center">
+                                <thead class="thead-light">
+                                    <tr>
+                                        <th class="text-break margin-top" colspan="4">
+                                            <h3 class="display-3" t-field="doc.name_cropped"/>
+                                        </th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="table-active">
+                                        <th>Estatus</th>
+                                        <th>Progreso</th>
+                                        <td>Fecha</td>
+                                        <td>Responsable</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <span t-field="doc.status"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.progress"/> %
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.date"/>
+                                        </td>
+                                        <td>
+                                            <span t-field="doc.user_id"/>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                            <div id="update_resume" class="row col-12">
+                                <div class="col-12">
+                                    <span t-field="doc.description"/>
+                                </div>
                             </div>
                         </div>
                     </div>
-                </div>
                 </t>
             </t>
         </t>
