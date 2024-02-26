@@ -2,12 +2,12 @@
 <odoo>
     <data>
         <record id="project_update_report" model="ir.actions.report">
-            <field name="name">Actualización de Estado</field>
+            <field name="name">Project Update</field>
             <field name="model">project.update</field>
             <field name="report_type">qweb-pdf</field>
             <field name="report_name">ntropy_project_update_report.action_project_update_report</field>
             <field name="report_file">ntropy_project_update_report.action_project_update_report</field>
-            <field name="print_report_name">'Actualización del Proyecto - %s' % (object.name)</field>
+            <field name="print_report_name">'Project Update - %s' % (object.name)</field>
             <field name="binding_model_id" ref="model_project_update"/>
             <field name="binding_type">report</field>
         </record>

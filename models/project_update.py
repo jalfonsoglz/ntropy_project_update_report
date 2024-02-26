@@ -6,3 +6,5 @@ from odoo import _, models, fields
 
 class ProjectUpdateReportInherit(models.Model):
     _inherit = ['project.update']
+
+    attendees = fields.Many2many('res.partner')

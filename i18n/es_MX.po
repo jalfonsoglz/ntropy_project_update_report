@@ -1,0 +1,120 @@
+# Translation of Odoo Server.
+# This file contains the translation of the following modules:
+# 	* ntropy_project_update_report
+#
+msgid ""
+msgstr ""
+"Project-Id-Version: Odoo Server 17.0+e\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2024-02-26 00:46+0000\n"
+"PO-Revision-Date: 2024-02-25 19:49-0500\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: es_MX\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 3.4.2\n"
+
+#. module: ntropy_project_update_report
+#: model:ir.actions.report,print_report_name:ntropy_project_update_report.project_update_report
+msgid "'Project Update - %s' % (object.name)"
+msgstr "'Actualización del Proyecto - %s' % (object.name)"
+
+#. module: ntropy_project_update_report
+#: model:mail.template,body_html:ntropy_project_update_report.mail_template_project_update
+msgid ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 14px;\">\n"
+"                        <strong>Project:</strong> <t t-out=\"object.project_id.name or ''\">Project Name</t><br>\n"
+"                        <strong>Progress:</strong> <t t-out=\"object.progress or ''\">15</t> %<br>\n"
+"                        <strong>Attendees:</strong> <t t-out=\"', '.join(object.attendees.mapped('name')) or ''\">Attendees names</t><br>\n"
+"                    </p>\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 14px;\">\n"
+"                        <br>Thank you for your participation in today's meeting. Please do not hesitate to contact us if you have any questions or questions about the content. Remember that you can consult the <a t-attf-href=\"/my/projects/{{ object.project_id.id }}?groupby=status&amp;sortby=date_deadline&amp;access_token={{ object.project_id.access_token }}\" target=\"_blank\">backlog</a>.<br>\n"
+"                    </p>\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 14px;\">\n"
+"                        <br><t t-out=\"object.description or ''\">Summary</t><br>\n"
+"                    </p>\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 14px;\">\n"
+"                        <t t-if=\"not is_html_empty(user.signature)\">\n"
+"                            <br>\n"
+"                            <t t-out=\"user.signature or ''\">--<br>Administrator</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+msgstr ""
+"<div style=\"margin: 0px; padding: 0px;\">\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 14px;\">\n"
+"                        <strong>Proyecto:</strong> <t t-out=\"object.project_id.name or ''\">Nombre del proyecto</t><br>\n"
+"                        <strong>Porcentaje:</strong> <t t-out=\"object.progress or ''\">15</t> %<br>\n"
+"                        <strong>Asistentes:</strong> <t t-out=\"', '.join(object.attendees.mapped('name')) or ''\">Nombres de asistentes</t><br>\n"
+"                    </p>\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 14px;\">\n"
+"                        <br>Gracias por su participación en la reunion de hoy. No dude en contactarnos si tiene alguna duda o sobre el contenido. Recuerde que puede consultar el <a t-attf-href=\"/my/projects/{{ object.project_id.id }}?groupby=status&amp;sortby=date_deadline&amp;access_token={{ object.project_id.access_token }}\" target=\"_blank\">Backlog</a>.<br>\n"
+"                    </p>\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 14px;\">\n"
+"                        <br><t t-out=\"object.description or ''\">Resumen</t><br>\n"
+"                    </p>\n"
+"                    <p style=\"margin: 0px; padding: 0px; font-size: 14px;\">\n"
+"                        <t t-if=\"not is_html_empty(user.signature)\">\n"
+"                            <br>\n"
+"                            <t t-out=\"user.signature or ''\">--<br>Administrator</t>\n"
+"                        </t>\n"
+"                    </p>\n"
+"                </div>\n"
+"            "
+
+#. module: ntropy_project_update_report
+#: model_terms:ir.ui.view,arch_db:ntropy_project_update_report.action_project_update_report
+msgid "ATTENDEES"
+msgstr "ASISTENTES"
+
+#. module: ntropy_project_update_report
+#: model:ir.model.fields,field_description:ntropy_project_update_report.field_project_update__attendees
+msgid "Attendees"
+msgstr "Asistentes"
+
+#. module: ntropy_project_update_report
+#: model_terms:ir.ui.view,arch_db:ntropy_project_update_report.action_project_update_report
+msgid "DATE"
+msgstr "FECHA"
+
+#. module: ntropy_project_update_report
+#: model:mail.template,subject:ntropy_project_update_report.mail_template_project_update
+msgid "Memorandum: {{ object.name or 'n/a' }}"
+msgstr "Minuta: {{ object.name or 'n/a' }}"
+
+#. module: ntropy_project_update_report
+#: model_terms:ir.ui.view,arch_db:ntropy_project_update_report.action_project_update_report
+msgid "PROGRESS"
+msgstr "PROGRESO"
+
+#. module: ntropy_project_update_report
+#: model:ir.actions.report,name:ntropy_project_update_report.project_update_report
+#: model:ir.model,name:ntropy_project_update_report.model_project_update
+#: model:mail.template,name:ntropy_project_update_report.mail_template_project_update
+msgid "Project Update"
+msgstr "Actualización de Estado"
+
+#. module: ntropy_project_update_report
+#: model_terms:ir.ui.view,arch_db:ntropy_project_update_report.action_project_update_report
+msgid "RESPONSIBLE"
+msgstr "RESPONSABLE"
+
+#. module: ntropy_project_update_report
+#: model_terms:ir.ui.view,arch_db:ntropy_project_update_report.action_project_update_report
+msgid "STATUS"
+msgstr "ESTATUS"
+
+#. module: ntropy_project_update_report
+#: model:ir.actions.act_window,name:ntropy_project_update_report.action_send_project_update_mail
+msgid "Send by email"
+msgstr "Enviar por correo electrónico"
+
+#. module: ntropy_project_update_report
+#: model:mail.template,description:ntropy_project_update_report.mail_template_project_update
+msgid "Send email to meeting attendees."
+msgstr "Envia correo a los asistentes a la reunion."

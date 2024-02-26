@@ -7,19 +7,19 @@
                     <div class="page">
                         <div class="table-responsive-xl">
                             <table class="table table text-center">
-                                <thead class="thead-light">
+                                <thead>
                                     <tr>
                                         <th class="text-break margin-top" colspan="4">
-                                            <h3 class="display-3" t-field="doc.name_cropped"/>
+                                            <h2 class="display-2" t-field="doc.name_cropped"/>
                                         </th>
                                     </tr>
                                 </thead>
                                 <tbody>
-                                    <tr class="table-active">
-                                        <th>Estatus</th>
-                                        <th>Progreso</th>
-                                        <td>Fecha</td>
-                                        <td>Responsable</td>
+                                    <tr>
+                                        <th>STATUS</th>
+                                        <th>PROGRESS</th>
+                                        <td>DATE</td>
+                                        <td >RESPONSIBLE</td>
                                     </tr>
                                     <tr>
                                         <td>
@@ -33,6 +33,14 @@
                                         </td>
                                         <td>
                                             <span t-field="doc.user_id"/>
+                                        </td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">ATTENDEES</td>
+                                    </tr>
+                                    <tr>
+                                        <td colspan="4">
+                                            <span t-field="doc.attendees"/>
                                         </td>
                                     </tr>
                                 </tbody>
