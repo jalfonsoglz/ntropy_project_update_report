@@ -4,6 +4,9 @@
 
 ## Changelog
 
+### 26/02/2024 v1.5
+* Fix bug on attendees email formatted
+
 ### 25/02/2024 v1.4
 * New field: Attendees.
 * The option to send email to attendees from the menu and attaching the PDF is added.

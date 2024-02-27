@@ -6,7 +6,7 @@
     'author': "Alfonso Gonzalez",
     'website': "https://ntropy.tech/odoo",
     'category': 'Customizations',
-    'version': '1.4',
+    'version': '1.5',
     'license': "LGPL-3",
     'sequence': "-75",
     'depends': ['base',
