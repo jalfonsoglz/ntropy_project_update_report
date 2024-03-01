@@ -19,14 +19,15 @@
                                         <th>STATUS</th>
                                         <th>PROGRESS</th>
                                         <td>DATE</td>
-                                        <td >RESPONSIBLE</td>
+                                        <td>RESPONSIBLE</td>
                                     </tr>
                                     <tr>
                                         <td>
                                             <span t-field="doc.status"/>
                                         </td>
                                         <td>
-                                            <span t-field="doc.progress"/> %
+                                            <span t-field="doc.progress"/>
+                                            %
                                         </td>
                                         <td>
                                             <span t-field="doc.date"/>

@@ -6,7 +6,7 @@
     'author': "Alfonso Gonzalez",
     'website': "https://ntropy.tech/odoo",
     'category': 'Customizations',
-    'version': '1.5',
+    'version': '1.6',
     'license': "LGPL-3",
     'sequence': "-75",
     'depends': ['base',
@@ -25,7 +25,7 @@
         # Sequence
         # Sample
     ],
-    'currency': "MXN",
+    'currency': "USD",
     'qweb': [''],
     'images': [''],
     'demo': [],

@@ -3,10 +3,14 @@
     <record id="project_update_report_inherit_form" model="ir.ui.view">
         <field name="name">project.update.report.form.inherit</field>
         <field name="model">project.update</field>
-        <field name="inherit_id" ref="project.project_update_view_form" />
+        <field name="inherit_id" ref="project.project_update_view_form"/>
         <field name="arch" type="xml">
             <xpath expr="//field[@name='date']" position="after">
-                <field name="attendees" widget="many2many_tags" options="{'color_field': 'color', 'no_create': True}, 'no_create_edit': True}"/>
+                <field name="attendees" widget="many2many_tags"
+                       options="{'color_field': 'color', 'no_create': True}, 'no_create_edit': True}"/>
+                <field name="check_paste_attendees" string="Extraer Asistentes" widget="boolean_toggle"/>
+                <field name="paste_attendees" invisible="check_paste_attendees != True"
+                       string="Ingresar texto de Asistentes"/>
             </xpath>
         </field>
     </record>

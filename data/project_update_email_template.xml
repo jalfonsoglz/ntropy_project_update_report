@@ -8,27 +8,40 @@
         <field name="reply_to">{{ (object.user_id.email_formatted or user.email_formatted) }}</field>
         <field name="subject">Memorandum: {{ object.name or 'n/a' }}</field>
         <field name="description">Send email to meeting attendees.</field>
-            <field name="body_html" type="html">
-                <div style="margin: 0px; padding: 0px;">
-                    <p style="margin: 0px; padding: 0px; font-size: 14px;">
-                        <strong>Project:</strong> <t t-out="object.project_id.name or ''">Project Name</t><br/>
-                        <strong>Progress:</strong> <t t-out="object.progress or ''">15</t> %<br/>
-                        <strong>Attendees:</strong> <t t-out="', '.join(object.attendees.mapped('name')) or ''">Attendees names</t><br/>
-                    </p>
-                    <p style="margin: 0px; padding: 0px; font-size: 14px;">
-                        <br/>Thank you for your participation in today's meeting. Please do not hesitate to contact us if you have any questions or questions about the content. Remember that you can consult the <a t-attf-href="/my/projects/{{ object.project_id.id }}?groupby=status&amp;sortby=date_deadline&amp;access_token={{ object.project_id.access_token }}" target="_blank">backlog</a>.<br/>
-                    </p>
-                    <p style="margin: 0px; padding: 0px; font-size: 14px;">
-                        <br/><t t-out="object.description or ''">Summary</t><br/>
-                    </p>
-                    <p style="margin: 0px; padding: 0px; font-size: 14px;">
-                        <t t-if="not is_html_empty(user.signature)">
-                            <br/>
-                            <t t-out="user.signature or ''">--<br/>Administrator</t>
+        <field name="body_html" type="html">
+            <div style="margin: 0px; padding: 0px;">
+                <p style="margin: 0px; padding: 0px; font-size: 14px;">
+                    <strong>Project:</strong>
+                    <t t-out="object.project_id.name or ''">Project Name</t>
+                    <br/>
+                    <strong>Progress:</strong>
+                    <t t-out="object.progress or ''">15</t> %
+                    <br/>
+                    <strong>Attendees:</strong>
+                    <t t-out="', '.join(object.attendees.mapped('name')) or ''">Attendees names</t>
+                    <br/>
+                </p>
+                <p style="margin: 0px; padding: 0px; font-size: 14px;">
+                    <br/>Thank you for your participation in today's meeting. Please do not hesitate to contact us if
+                    you have any questions or questions about the content. Remember that you can consult the <a
+                        t-attf-href="/my/projects/{{ object.project_id.id }}?groupby=status&amp;sortby=date_deadline&amp;access_token={{ object.project_id.access_token }}"
+                        target="_blank">backlog</a>.
+                    <br/>
+                </p>
+                <p style="margin: 0px; padding: 0px; font-size: 14px;">
+                    <br/>
+                    <t t-out="object.description or ''">Summary</t>
+                    <br/>
+                </p>
+                <p style="margin: 0px; padding: 0px; font-size: 14px;">
+                    <t t-if="not is_html_empty(user.signature)">
+                        <br/>
+                        <t t-out="user.signature or ''">--<br/>Administrator
                         </t>
-                    </p>
-                </div>
-            </field>
+                    </t>
+                </p>
+            </div>
+        </field>
         <field name="report_template_ids" eval="[(4, ref('ntropy_project_update_report.project_update_report'))]"/>
         <field name="auto_delete" eval="False"/>
     </record>
