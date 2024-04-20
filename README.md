@@ -4,7 +4,12 @@
 
 ## Changelog
 
-### 01/03/2024 v1.6
+### 19/04/2024 v1.7
+* Improvement in text writing and translations.
+* Now allows you to extract emails from Google Calendar format.
+* If the contact exists in Odoo, add it to assistants, otherwise create it.
+* If the source text has the name of the recipient, create the contact with that name, otherwise it will say "unknown".
+* Once the emails have been extracted, the extraction field is cleared.
 
 ### 26/02/2024 v1.5
 

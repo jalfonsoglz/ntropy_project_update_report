@@ -8,9 +8,9 @@
             <xpath expr="//field[@name='date']" position="after">
                 <field name="attendees" widget="many2many_tags"
                        options="{'color_field': 'color', 'no_create': True}, 'no_create_edit': True}"/>
-                <field name="check_paste_attendees" string="Extraer Asistentes" widget="boolean_toggle"/>
+                <field name="check_paste_attendees" string="Extract Attendee" widget="boolean_toggle"/>
                 <field name="paste_attendees" invisible="check_paste_attendees != True"
-                       string="Ingresar texto de Asistentes"/>
+                       string="Paste Attendees Text"/>
             </xpath>
         </field>
     </record>

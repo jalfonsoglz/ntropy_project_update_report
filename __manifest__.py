@@ -6,7 +6,7 @@
     'author': "Alfonso Gonzalez",
     'website': "https://ntropy.tech/odoo",
     'category': 'Customizations',
-    'version': '1.6',
+    'version': '1.7',
     'license': "LGPL-3",
     'sequence': "-75",
     'depends': ['base',
@@ -18,10 +18,10 @@
         # Reports
         'report/project_update_report.xml',
         'report/report.xml',
-        'data/project_update_email_template.xml',
         # Views
         'views/project_update_view_form.xml',
         # Data
+        'data/project_update_email_template.xml',
         # Sequence
         # Sample
     ],

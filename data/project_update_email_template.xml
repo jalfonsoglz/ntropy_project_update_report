@@ -4,10 +4,10 @@
         <field name="name">Project Update</field>
         <field name="model_id" ref="project.model_project_update"/>
         <field name="email_from">{{ (object.user_id.email_formatted or user.email_formatted) }}</field>
-        <field name="email_to">{{ (object.attendees.mapped('email_formatted')) }}</field>
+        <field name="email_to">{{ ', '.join(object.attendees.mapped('email_formatted')) }}</field>
         <field name="reply_to">{{ (object.user_id.email_formatted or user.email_formatted) }}</field>
         <field name="subject">Memorandum: {{ object.name or 'n/a' }}</field>
-        <field name="description">Send email to meeting attendees.</field>
+        <field name="description">Send email to meeting attendees and stakeholders.</field>
         <field name="body_html" type="html">
             <div style="margin: 0px; padding: 0px;">
                 <p style="margin: 0px; padding: 0px; font-size: 14px;">
@@ -23,7 +23,8 @@
                 </p>
                 <p style="margin: 0px; padding: 0px; font-size: 14px;">
                     <br/>Thank you for your participation in today's meeting. Please do not hesitate to contact us if
-                    you have any questions or questions about the content. Remember that you can consult the <a
+                    you have any questions or questions about the content.
+                    <br/>Remember that you can consult the <a
                         t-attf-href="/my/projects/{{ object.project_id.id }}?groupby=status&amp;sortby=date_deadline&amp;access_token={{ object.project_id.access_token }}"
                         target="_blank">backlog</a>.
                     <br/>
